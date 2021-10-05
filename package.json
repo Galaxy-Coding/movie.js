@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "centra": "^2.5.0"
+  },
+  "scripts": {
+    "jsdoc": "jsdoc module/index.js --configure .jsdoc.json",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "clean-jsdoc-theme": "^3.2.8",
+    "express": "^4.17.1",
+    "jsdoc": "^3.6.7"
+  }
+}
