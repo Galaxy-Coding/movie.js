@@ -1,0 +1,10 @@
+node_modules/
+docs/
+tests/
+server.js
+replit.nix
+API.MD
+.jsdoc.json
+.replit
+.eslintrc.json
+.env

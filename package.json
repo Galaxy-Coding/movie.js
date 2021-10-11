@@ -1,14 +1,44 @@
 {
+  "name": "movie.js",
+  "version": "3.3.4",
+  "description": "Get information for the OMDB API",
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "movie",
+    "wrapper",
+    "imdb",
+    "omdb",
+    "databse",
+    "series",
+    "episode",
+    "easy",
+    "node",
+    "netflix"
+  ],
   "dependencies": {
     "centra": "^2.5.0"
   },
   "scripts": {
-    "jsdoc": "jsdoc module/index.js --configure .jsdoc.json",
-    "start": "node index.js"
+    "jsdoc": "jsdoc lib/index.js --configure .jsdoc.json",
+    "start": "node index.js",
+    "format": "npx prettier lib/**.js --write --use-tabs --trailing-comma es5",
+    "lint": "eslint lib/* tests/*",
+		"lint-fix": "eslint lib/* tests/* --fix",
+    "test": "jest",
+    "lint-format": "npm run lint && npm run format",
+    "bundle": "browserify node_modules/centra/createRequest.js -o lib/bundle.js"
   },
   "devDependencies": {
-    "clean-jsdoc-theme": "^3.2.8",
+    "browserify": "^17.0.0",
+    "docdash": "^1.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
     "express": "^4.17.1",
-    "jsdoc": "^3.6.7"
-  }
+    "jest": "^27.0.0",
+    "jsdoc": "^3.5.5",
+    "prettier": "^2.4.1"
+  },
+  "main": "lib/index.js"
 }

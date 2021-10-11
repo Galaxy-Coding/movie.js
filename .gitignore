@@ -1,0 +1,6 @@
+node_modules/
+docs/
+server.js
+.env
+.replit
+.replit.nix
